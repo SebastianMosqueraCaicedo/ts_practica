@@ -93,11 +93,11 @@ cantidadIngresos2018.forEach(function (value) {
 
 // Ejercisio 2
 const entradasCamiones = [
-Array.from(ingresos2017.entries());
-Array.from(ingresos2018.entries());
-Array.from(ingresos2019.entries());
-Array.from(ingresos2020.entries());
-Array.from(ingresos2021.entries());
+Array.from(ingresos2017.entries()),
+Array.from(ingresos2018.entries()),
+Array.from(ingresos2019.entries()),
+Array.from(ingresos2020.entries()),
+Array.from(ingresos2021.entries())
   ]
 
 const coloresTotales: string [] = [];
@@ -106,10 +106,10 @@ const arregloColoresTotales = entradasCamiones.map(function (value) {
     if (valor[1] > 0){
       coloresTotales.push(valor[0].color);
     }
-  }
+  });
 });
 const setColoresTotales = new Set(coloresTotales);
-// console.log(setColoresTotales);
+ console.log(setColoresTotales);
 
 // ejercisio 3
 const totalCamion: string [] = [];
@@ -119,7 +119,7 @@ const camionesRegistrados = Array.from(ingresos2019.entries()).map(function (val
   }
 })
 
-console.log(totalCamion);
+// console.log(totalCamion);
 // ejercisio 4
 
 const arrayCamiones2017 = Array.from(ingresos2017.keys());
