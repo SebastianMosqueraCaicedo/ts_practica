@@ -241,12 +241,13 @@ const setColoresTotales = new Set(coloresTotales);
 
 // ejercisio 3
 const totalCamion: string [] = [];
-const camionesRegistrados = Array.from(ingresos2019.keys()).map(function (value) {
-  if (value.ciudad === "Bogota") {
-    totalCamion.push(value.placa);
+const camionesRegistrados = Array.from(ingresos2019.entries()).map(function (value) {
+  if (value[0].ciudad === "Bogota" && value[1] > 0) {
+    totalCamion.push(value[0].placa);
   }
 })
-// console.log(totalCamion);
+
+console.log(totalCamion);
 // ejercisio 4
 
 const arrayCamiones2017 = Array.from(ingresos2017.keys());
@@ -333,9 +334,9 @@ const sumasTotales: number[] = [];
 arregloIngresosTotalesInfo.map(function (value) {
   value.map(function (valor) {
     if (valor[0].ciudad === "Santa Marta") {
-sumasTotales.push()
+      sumasTotales.push()
       reporteSantaMantenimientos.set(valor[0], valor[1]);
     }
   })
 })
-console.log(reporteSantaMantenimientos);
+// console.log(reporteSantaMantenimientos);
